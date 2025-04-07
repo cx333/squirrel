@@ -1,14 +1,18 @@
 [workspace]
 
 members = [
-    "crates/core",           # 核心抽象接口
-    "crates/storage-engine", # 存储引擎实现
-    "crates/query-engine",   # 查询服务
-    "crates/server",         # 网络服务
-    "crates/cli",            # 命令行
-    "crates/client-sdk",     # 客户端-sdk
-    "libs/common",           # 公共工具库
-    "libs/protocol"          # 通信协议定义
+    "crates/core", # 通用 trait 和接口
+    "crates/storage-engine", # 高层存储协调逻辑
+    "crates/column-store", # 底层列式存储细节
+    "crates/meta-service", # 元信息服务（schema、chunk、graph）
+    "crates/query-engine", # 查询执行与计划
+    "crates/graph-engine", # 图结构支持（可选）
+    "crates/server", # 网络服务入口（API 网关）
+    "crates/cli", # 命令行工具
+    "crates/client-sdk", # SDK for 外部调用
+    "crates/search-engine", # 搜索模块（全文索引、倒排索引）
+    "libs/common", # 公共工具
+    "libs/protocol", # 通信协议（可改名为 rpc-protocol）
 ]
 
 default-members = [
