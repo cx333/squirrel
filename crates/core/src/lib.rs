@@ -57,7 +57,7 @@ pub trait MetaService {
 ///
 /// 表示单元格中的值，用于插入和查询数据。
 ///
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Value {
     Int(i64),
     Float(f64),

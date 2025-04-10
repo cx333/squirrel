@@ -16,7 +16,7 @@ members = [
 ]
 
 default-members = [
-    "crates/core",
+    #    "crates/core",
     "crates/storage-engine"
 ]
 
